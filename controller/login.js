@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
             res.status(400).send("User not found");
         }
         else if(user.password == currentUser.password){
-            jwt.sign({_id:currentUser._id},"Guru",(err,token)=>{
+            jwt.sign({_id:currentUser._id},"secretkey",(err,token)=>{
                 console.log(token);
                 res.header("auth-token", token).send({"token" : token});
             })

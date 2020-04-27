@@ -9,11 +9,11 @@ router.use((req,res,next)=>{
     const token = req.header('auth-token');
     console.log("auth-token ",token);
     if(!token){
-        res.send("Access Notified");
+        res.send("Token is undefined");
     }
     else{
-        jwt.verify(token,"Guru",function(err,decoded){
-            console.log(decoded);
+        jwt.verify(token,"secretkey",function(err,decodedVal){
+            console.log(decodedVal);
             if(err){
                 res.status("403").send("Access forbiden");
             }

@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
             });
             var isSaved = await newUser.save();
             if(isSaved){
-                res.send(isSaved.name + " is registered successfully");
+                res.send("User is registered successfully");
             }
         }else{
             res.status(400).send("Email already exists");
