@@ -87,7 +87,7 @@ Registers the user and saves the details in the mongo database
 
 
 #### Login URL
-`http://167.99.144.102:3000/register` <br/>
+`http://167.99.144.102:3000/login` <br/>
 Logins the user and sends the token as a response<br/>
 #### Method
 `POST`
