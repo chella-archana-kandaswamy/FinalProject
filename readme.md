@@ -82,7 +82,7 @@ Registers the user and saves the details in the mongo database
 
 **Error Response** <br/>
 - Status code: 400
-    - Enter valid details (if the data validation does not macth the schema)
+    - Enter valid details (if the data validation does not match the schema)
     - Email already exists (when trying to register the same email address)
 
 
