@@ -57,7 +57,7 @@ Subscription key which provides access to the API
 ## Demo using Postman
 Initially we are authorizing the user to access the Ink Recognizer API using JWT (JSON Web Token)<br/>
 ### Register URL
-`http://localhost:3000/register` <br/>
+`http://167.99.144.102:3000/register` <br/>
 Registers the user and saves the details in the mongo database
 #### Method
 `POST`
@@ -87,7 +87,7 @@ Registers the user and saves the details in the mongo database
 
 
 #### Login URL
-`http://localhost:3000/register` <br/>
+`http://167.99.144.102:3000/register` <br/>
 Logins the user and sends the token as a response<br/>
 #### Method
 `POST`
@@ -116,14 +116,14 @@ Logins the user and sends the token as a response<br/>
     - Login successful (when password didn't match or email doesn't exists in the database)
 
 #### Ink Recognizer URL
-`http://localhost:3000/inkrecognizer`<br/>
+`http://167.99.144.102:3000/inkrecognizer`<br/>
 Calls the Ink Recognizer API internally.
 #### Method
 `PUT`
 
 #### Request Headers
 Following are the key value pairs of the headers
-* `Ocp-Apim-Subscription-Key` : d03d82c62af143b59867a0827e1b42f5
+* `Ocp-Apim-Subscription-Key` : *Provided in the canvas submission*
 * `auth-token` : *Enter the token that is obtained in the response of the login api call*
 
 #### Request Body
