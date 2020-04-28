@@ -17,24 +17,24 @@ The Ink Recognizer API recognizes handwriting created in digital ink in 63 langu
 `PUT`
 
 ### Request Headers
-`x-ms-client-request-id` : [string] [optional]<br/>
+`x-ms-client-request-id : [string] [optional]`<br/>
 Specific value which can be used to identify a query. This value will be returned back as part of the response headers if specified.
 
-`Content-Type`: [string] [optional]<br/>
+`Content-Type : [string] [optional]`<br/>
 Media type of the body sent to the API
 
-`Ocm-Apim-Subscription-Key`: [string] [required]<br/>
+`Ocm-Apim-Subscription-Key : [string] [required]`<br/>
 Subscription key which provides access to the API
 
 ### Request Body
 `application/json` : The ink content<br/>
-* applicationType [optional]: Domain of the client application.
-*  inkPointValueAttributes [optional] : A container for the attributes of a value contained in the ink point object.
-* inputDeviceKind [optional] : identifies the kind of device used as the writing instrument.
-* language [required] : language code for the expected language for the handwritten content in the ink strokes.
-* strokes [required] : array of strokes sent for recognition.
+* `applicationType [optional]`: Domain of the client application.
+*  `inkPointValueAttributes [optional]` : A container for the attributes of a value contained in the ink point object.
+* `inputDeviceKind [optional]` : identifies the kind of device used as the writing instrument.
+* `language [required]` : language code for the expected language for the handwritten content in the ink strokes.
+* `strokes [required]` : array of strokes sent for recognition.
 * unit [optional] : physical unit of the ink strokes.
-* unitMultiple [optional] : scaling factor to be applied to the point coordinates when interpreting them in the physical units specified.
+* `unitMultiple [optional]` : scaling factor to be applied to the point coordinates when interpreting them in the physical units specified.
 
 
 ```
@@ -64,9 +64,9 @@ Registers the user and saves the details in the mongo database
 ### Request Body
 * Content-Type : JSON 
 * Body data 
-    * name : [string] [required] - Name of the user
-    * email : [string] [required] [email] - Email of the user
-    * password : [string] [required] [min[6]] - Password 
+    * `name : [string] [required]` - Name of the user
+    * `email : [string] [required] [email]` - Email of the user
+    * `password : [string] [required] [min[6]]` - Password 
     <br/>
 ```
 {
@@ -95,8 +95,8 @@ Logins the user and sends the token as a response<br/>
 #### Request Body
 * Content-Type : JSON 
 * Body data 
-    * email : [string] [required] [email] - Email of the user
-    * password : [string] [required] [min[6]] - Password 
+    * `email : [string] [required] [email]` - Email of the user
+    * `password : [string] [required] [min[6]]` - Password 
     <br/>
 
 ```
@@ -123,8 +123,8 @@ Calls the Ink Recognizer API internally.
 
 #### Request Headers
 Following are the key value pairs of the headers
-* Ocp-Apim-Subscription-Key : d03d82c62af143b59867a0827e1b42f5
-* auth-token : *Enter the token that is obtained in the response of the login api call*
+* `Ocp-Apim-Subscription-Key` : d03d82c62af143b59867a0827e1b42f5
+* `auth-token` : *Enter the token that is obtained in the response of the login api call*
 
 #### Request Body
 Ink strokes in the JSON format
