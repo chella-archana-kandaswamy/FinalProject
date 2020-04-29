@@ -39,39 +39,7 @@ router.post('/', (req, res) => {
             res.send(resp.data);
         }).catch(function (err) {
             console.log("Error");
-            if (err.resp.status == 400) {
-                res.status(400).send({
-                    "message": "Request could not be understood"
-                });
-            } else if (err.resp.status == 401) {
-                res.status(401).send({
-                    "message": "Your subscription does not support this request"
-                });
-            } else if (err.resp.status == 408) {
-                res.status(408).send({
-                    "message": "Server timed outwaiting for the request"
-                });
-            } else if (err.resp.status == 413) {
-                res.status(413).send({
-                    "message": "Payload is too large"
-                });
-            } else if (err.resp.status == 429) {
-                res.status(429).send({
-                    "message": "The server is busy. Try again later"
-                });
-            } else if (err.resp.status == 500) {
-                res.status(500).send({
-                    "message": "The server has encountered an error"
-                });
-            } else if (err.resp.status == 501) {
-                res.status(501).send({
-                    "message": "The request function is not supported"
-                });
-            } else if (err.resp.status == 401) {
-                res.status(401).send({
-                    "message": "Your subscription does not support this request"
-                });
-            }
+            res.send("Error");
         })
 })
 
