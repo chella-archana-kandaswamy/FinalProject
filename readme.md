@@ -86,13 +86,13 @@ Registers the user and saves the details in the mongo database
     - Email already exists (when trying to register the same email address)
 
 
-#### Login URL
+### Login URL
 `http://167.99.144.102:3000/login` <br/>
 Logins the user and sends the token as a response<br/>
 #### Method
 `POST`
 
-#### Request Body
+### Request Body
 * Content-Type : JSON 
 * Body data 
     * `email : [string] [required] [email]` - Email of the user
@@ -115,18 +115,18 @@ Logins the user and sends the token as a response<br/>
     - Enter valid details (if the data validation does not macth the schema)
     - Login successful (when password didn't match or email doesn't exists in the database)
 
-#### Ink Recognizer URL
+### Ink Recognizer URL
 `http://167.99.144.102:3000/inkrecognizer`<br/>
 Calls the Ink Recognizer API internally.
 #### Method
-`PUT`
+`POST`
 
-#### Request Headers
+### Request Headers
 Following are the key value pairs of the headers
 * `Ocp-Apim-Subscription-Key` : *Provided in the canvas submission*
 * `auth-token` : *Enter the token that is obtained in the response of the login api call*
 
-#### Request Body
+### Request Body
 Ink strokes in the JSON format
 ```
 {
